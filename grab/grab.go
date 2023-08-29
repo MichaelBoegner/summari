@@ -10,7 +10,7 @@ func GetEmails() {
 	fmt.Println("Building call . . . ")
 
 	getUrl := "https://google.com"
-	bodyData := []byte("{}")
+	bodyData := []byte("")
 
 	request, err := http.NewRequest("GET", getUrl, bytes.NewBuffer(bodyData))
 	request.Header.Set("Content-Type", "application/json")
