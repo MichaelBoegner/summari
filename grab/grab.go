@@ -2,6 +2,7 @@ package grab
 
 import (
 	"bytes"
+	"emails/credentials"
 	"fmt"
 	"net/http"
 )
@@ -23,5 +24,7 @@ func GetEmails() {
 	}
 
 	fmt.Println("Status:", response.Status)
-
+	openAPIKey := credentials.GoDotEnvVariable("OPENAI_API_KEY")
+	mailgunAPIKey := credentials.GoDotEnvVariable("MAILGUN_API_KEY")
+	fmt.Println(openAPIKey, mailgunAPIKey)
 }
